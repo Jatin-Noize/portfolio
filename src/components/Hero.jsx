@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa'
+import profile from "../assets/profile.jpeg"
 
 export default function Hero() {
   return (
@@ -68,9 +69,14 @@ export default function Hero() {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-blue-400/30 relative overflow-hidden">
                 {/* Placeholder for profile image */}
-                <div className="w-full h-full bg-gray-800 flex items-center justify-center">
-                  <span className="text-4xl">JG</span>
-                </div>
+                <div className="w-full h-full bg-gray-800 flex items-center justify-center relative">
+  <span className="text-4xl">𝔍𝔞𝔱𝔦𝔫 𝔊𝔞𝔲𝔱𝔞𝔪</span>
+  <img 
+    className='absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300' 
+    src={profile} 
+    alt="Profile" 
+  />
+</div>
               </div>
               <motion.div
                 animate={{ rotate: 360 }}
@@ -96,23 +102,16 @@ export default function Hero() {
             <FaGithub />
           </motion.a>
           <motion.a 
-            href="#" 
+            href="https://www.linkedin.com/in/jatin-gautam-2b7519329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
             target="_blank"
             whileHover={{ y: -5, color: '#3b82f6' }}
             className="text-gray-400 hover:text-blue-400 text-2xl"
           >
             <FaLinkedin />
           </motion.a>
+       
           <motion.a 
-            href="#" 
-            target="_blank"
-            whileHover={{ y: -5, color: '#3b82f6' }}
-            className="text-gray-400 hover:text-blue-400 text-2xl"
-          >
-            <FaTwitter />
-          </motion.a>
-          <motion.a 
-            href="mailto:jayveer282004@gmail.com" 
+            href="#contact" 
             whileHover={{ y: -5, color: '#3b82f6' }}
             className="text-gray-400 hover:text-blue-400 text-2xl"
           >

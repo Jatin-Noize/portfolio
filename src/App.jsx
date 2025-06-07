@@ -6,11 +6,11 @@ import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
-// import Footer from './components/Footer'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="bg-black scroll-smooth text-gray-100 min-h-screen">
+    <div className="bg-black scroll-smooth text-gray-100 min-h-screen" style={{ scrollBehavior: 'smooth' }}>
       {/* Blue flare effects */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-1/5 left-1/5 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-10 animate-pulse"></div>
@@ -27,7 +27,7 @@ export default function App() {
         <Projects />
         <Contact />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
