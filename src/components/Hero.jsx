@@ -13,12 +13,36 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="md:w-1/2 mb-10 md:mb-0"
           >
-            <motion.h1 
-              className="text-4xl md:text-6xl font-bold mb-4"
-              whileHover={{ scale: 1.02 }}
-            >
-              Hi, I'm <span className="text-blue-400">Jatin Gautam</span>
-            </motion.h1>
+           <motion.h1 
+  className="text-4xl md:text-6xl font-bold mb-4"
+  whileHover={{ scale: 1.02 }}
+  initial={{ opacity: 0 }}
+  animate={{ 
+    opacity: 1,
+    transition: { duration: 1 }
+  }}
+>
+  <motion.span
+    initial={{ width: 0 }}
+    animate={{ 
+      width: "100%",
+      transition: { duration: 1, delay: 0.5 }
+    }}
+    className="inline-block overflow-hidden whitespace-nowrap"
+  >
+    Hi, I'm{" "}
+  </motion.span>
+  <motion.span
+    initial={{ width: 0 }}
+    animate={{ 
+      width: "100%",
+      transition: { duration: 1, delay: 1.5 }
+    }}
+    className="inline-block overflow-hidden text-blue-400 whitespace-nowrap"
+  >
+    Jatin Gautam
+  </motion.span>
+</motion.h1>
             <motion.h2 
               className="text-2xl md:text-3xl text-gray-400 mb-6"
               initial={{ opacity: 0 }}
